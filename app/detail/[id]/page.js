@@ -1,5 +1,6 @@
 import client from "@/util/database"
 import { ObjectId } from "mongodb";
+import Link from "next/link";
 
 export default async function Detail(props) {
   const db = await client.db('sports');
@@ -18,6 +19,9 @@ export default async function Detail(props) {
           Team : {item.team}
         </div>
       </div>
+      <Link href={`/edit/${props.params.id}`}>
+        <button style={{margin:"10px", padding:"5px"}} type="submit">Edit</button>
+      </Link>
     </div>
   )
 }

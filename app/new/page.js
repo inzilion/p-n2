@@ -2,7 +2,7 @@ export default function New() {
   return(
   <div>
     <h2>NEW</h2>
-    <form action method="post">
+    <form action="/api/new" method="post">
       <div className="detail">
         <div className="detail-item">
           Name : <input type="text" name="name" ></input>
