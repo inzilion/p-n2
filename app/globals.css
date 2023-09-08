@@ -30,6 +30,8 @@ h2 {
 }
 
 .list-item {
+  opacity: 1;
+  transition: all 1s;
   background: pink;
   margin: 10px;
   padding: 5px 10px;
