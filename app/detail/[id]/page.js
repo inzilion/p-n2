@@ -20,7 +20,10 @@ export default async function Detail(props) {
         </div>
       </div>
       <Link href={`/edit/${props.params.id}`}>
-        <button style={{margin:"10px", padding:"5px"}} type="submit">Edit</button>
+        <button style={{margin:"10px", padding:"5px"}} type="button">Edit</button>
+      </Link>
+      <Link href={`/api/remove?id=${props.params.id}`}>
+        <button style={{margin:"10px", padding:"5px"}} type="button">DEL</button>
       </Link>
     </div>
   )
