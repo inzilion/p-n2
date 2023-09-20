@@ -1,4 +1,10 @@
-export default function New() {
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/pages/api/auth/[...nextauth]'
+export default async function New() {
+  const session = await getServerSession(authOptions)
+  if(!session)
+    return <h2>로그인 하시오</h2>
+  
   return(
   <div>
     <h2>NEW</h2>
