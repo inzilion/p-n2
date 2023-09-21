@@ -14,7 +14,7 @@ export default async function handler(req, res){
   else                        msg = "ERROR"
 
   if(req.method === 'GET')   
-    res.redirect(302,'/msg/201');
+    return res.redirect(302,'/msg/201');
   else
     return res.status(200).json(msg);
   

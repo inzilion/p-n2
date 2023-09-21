@@ -20,7 +20,7 @@ export default async function RootLayout({ children }) {
           <div className='nav-item'><Link href='/new'>New</Link></div>
           <LoginBtn session={session}/>
         </div>
-        {children}
+          {children}
       </body>
     </html>
   )
